@@ -1,4 +1,4 @@
-function inputsim = fk(amp_r,amp_l,dt)
+function fk(amp_r,amp_l,dt)
 
 global f A P l0 l1 l2 t inputsim
 

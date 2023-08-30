@@ -12,7 +12,7 @@ function out = simtorobot(name)
             out(:,2*servo(1,i)-1) = (-1)^servo(3,i)*round(simaux(:,i)/resol(servo(2,i),1));
             out(:,2*servo(1,i)) = [0; ceil(abs(vel(:,i)/resol(servo(2,i),2)))];
     end
-
+    
     out = out.';
     out = out(:);
     

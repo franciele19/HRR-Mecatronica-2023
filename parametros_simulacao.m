@@ -1,9 +1,9 @@
 FilteringTimeConstant = 0.001; %s
-gravidade = [0 0 -9.80665]; %m/s^2
+gravidade = [0 -9.80665 0]; %m/s^2
 
 SphereRadius = 1e-4; %m
-chao = [1 0.5 0.01]; %m
-OffsetChao = [0.4 0 0]; %m
+chao = [0.5 0.01 1]; %m
+OffsetChao = [0 0 0.4]; %m
 ContactStiffness = 25000; %N/m
 ContactDamping = 100; %Ns/m
 KinectFriction = 0.6;

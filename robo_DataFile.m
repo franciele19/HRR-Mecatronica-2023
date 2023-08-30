@@ -187,7 +187,7 @@ smiData.RigidTransform(24).ID = "F[torso-1:-:perna5-2]";
 
 %Translation Method - Cartesian
 %Rotation Method - Arbitrary Axis
-smiData.RigidTransform(25).translation = [20.507700168599804 13.799999999972725 267.25+chao(3)/2+SphereRadius];  % mm
+smiData.RigidTransform(25).translation = [0 267.25+chao(2)/2+SphereRadius 0]; %[20.507700168599804 13.799999999972725 267.25+chao(3)/2+SphereRadius];  % mm
 smiData.RigidTransform(25).angle = -pi/2;  % rad
 smiData.RigidTransform(25).axis = [1 0 0];
 smiData.RigidTransform(25).ID = "RootGround[torso-1]";
