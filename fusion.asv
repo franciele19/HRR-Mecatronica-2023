@@ -1,0 +1,9 @@
+function fusion(amp_ra,amp_la,amp_pel,amp_r,amp_l,dt)
+
+    ampik = ik(amp_ra,amp_la,amp_pel,dt,'fusion')
+    new_amp_r = ampik(:,1) + amp_r
+    new_amp_l = ampik(:,2) + amp_l
+   
+    fk(new_amp_r,new_amp_l,dt);
+
+end
