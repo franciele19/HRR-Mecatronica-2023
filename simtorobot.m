@@ -7,7 +7,7 @@ function out = simtorobot(name)
 
     simaux = inputsim(cut:end,2:end);
     vel = diff(simaux)*f; %velocidade em rad/s
-
+    
     for i = 1:12
             out(:,2*servo(1,i)-1) = (-1)^servo(3,i)*round(simaux(:,i)/resol(servo(2,i),1));
             out(:,2*servo(1,i)) = [0; ceil(abs(vel(:,i)/resol(servo(2,i),2)))];
