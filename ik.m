@@ -19,7 +19,6 @@ Aaux = A;
 amp = [amp_ra amp_la amp_pel];
 
 for i = 0:1/f:dt
-
     dP = amp/dt*(1 - cos(2*pi*i/dt));
     Paux = Paux + dP/f;
 
@@ -53,13 +52,12 @@ for i = 0:1/f:dt
         theta(5) = -theta(5);
 
         Aaux(:,j) = theta;
-    end
-
-    taux = taux + 1/f;
+    end   
 
     if p.Results.type == 'normal'
         inputsim = [inputsim; [taux reshape(Aaux,1,[])]];
     end
+    taux = taux + 1/f;
 end
 
     if p.Results.type == 'normal'

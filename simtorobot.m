@@ -6,11 +6,11 @@ function out = simtorobot(name)
              (360*pi/180)/4096 (116.62*2*pi/60)/1024]; %mx %rad e rad/s
 
     simaux = inputsim(cut:end,2:end);
-    vel = diff(simaux)*f; %velocidade em rad/s
+    [s,~] = size(simaux);
     
     for i = 1:12
             out(:,2*servo(1,i)-1) = (-1)^servo(3,i)*round(simaux(:,i)/resol(servo(2,i),1));
-            out(:,2*servo(1,i)) = [0; ceil(abs(vel(:,i)/resol(servo(2,i),2)))];
+            out(:,2*servo(1,i)) = zeros(s,1);
     end
     
     out = out.';
